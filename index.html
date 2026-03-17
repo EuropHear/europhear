@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/logomarca.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Europhear</title>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "sji0ahcl6o");
+    </script>
+    <!-- /Microsoft Clarity -->
+
+    <!-- Meta Pixel
+         NOTE: o carregamento real do Pixel é feito no React (fbpixel.ts/useMeta).
+         Não inclua aqui o snippet JS do fbq para evitar PageView duplicado. -->
+  </head>
+
+  <body>
+    <!-- Meta Pixel (noscript apenas; opcional) -->
+    
+    <!-- /Meta Pixel -->
+
+    <!-- Botão flutuante WhatsApp -->
+    <style>
+      #whatsapp-float {
+        position: fixed;
+        bottom: 24px;
+        right: 18px;
+        z-index: 9999;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background-color: #25d366;
+        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        display: grid;
+        place-items: center;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      #whatsapp-float:hover {
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 12px 24px rgba(37, 211, 102, 0.45);
+      }
+      #whatsapp-float img {
+        width: 26px;
+        height: 26px;
+      }
+    </style>
+
+    <div id="root"></div>
+
+    <a id="whatsapp-float"
+       href="https://wa.me/5532999069763?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20os%20aparelhos%20auditivos%20Europhear"
+       target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+      <img src="https://static.whatsapp.net/rsrc.php/v3/yP/r/rYZqPCBaG70.png" alt="WhatsApp" />
+    </a>
+
+    <!-- Script principal Vite/React -->
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Yampi Buy Button (opcional)
+    <script
+      class="ymp-script"
+      src="https://api.yampi.io/v2/fonovital/public/buy-button/KQ4WBFEEML/js"
+      async
+    ></script>
+    -->
+  </body>
+</html>
