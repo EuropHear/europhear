@@ -60,7 +60,7 @@ export default function Rastreio() {
           <div className="text-sm text-gray-500 text-center mt-6">
             {r.helpText}{" "}
             <a
-              href="https://wa.me/5532999069763"
+              href="https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0"
               target="_blank"
               rel="noreferrer"
               className="text-[#008b91] font-semibold hover:underline"

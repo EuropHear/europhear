@@ -78,14 +78,14 @@ export default function TesteAuditivo() {
     {
       nome: 'Aparelho Auditivo Europhear Pro+',
       descricao: 'Aparelho auditivo com excelente qualidade sonora e discreto.',
-      preco: 'R$ 3.490,00',
+      preco: '€ 3.490,00',
       link: '/tipos-de-aparelhos',
       imagem: '/assets/produto.jpeg'
     },
     {
       nome: 'Aparelho Auditivo Europhear Mini',
       descricao: 'Modelo compacto e eficiente, ideal para uso diário.',
-      preco: 'R$ 2.790,00',
+      preco: '€ 2.790,00',
       link: '/tipos-de-aparelhos',
       imagem: '/assets/produto.jpeg'
     }
@@ -348,5 +348,6 @@ export default function TesteAuditivo() {
     </section>
   )
 }
+
 
 

@@ -49,14 +49,14 @@ export default function Voxcharge() {
     avaliacoes: 34,
     nota: 4.4,
     esgotado: true,
-    whatsapp: 'https://wa.me/5532999069763?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20especialista%20da%20Europhear'
+    whatsapp: 'https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0'
   }
 
   const [imagemSelecionada, setImagemSelecionada] = useState<string>(voxchargeGallery[0].src)
   const parcela = (dados.precoAtual / 12).toFixed(2).replace('.', ',')
 
   const suporteWhatsapp =
-    'https://wa.me/5532999069763?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20especialista%20da%20Europhear'
+    'https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0'
 
   return (
     <section className="pt-16 md:pt-20 min-h-screen hero-bg grid-bg font-[Inter] text-slate-900">
@@ -87,12 +87,12 @@ export default function Voxcharge() {
 
                 <div className="space-y-1 text-center lg:text-left">
                   <p className="line-through text-xs sm:text-sm text-slate-400">
-                    R$ {dados.precoOriginal.toFixed(2).replace('.', ',')}
+                    € {dados.precoOriginal.toFixed(2).replace('.', ',')}
                   </p>
                   <p className="text-slate-900 text-3xl font-bold">
-                    R$ {dados.precoAtual.toFixed(2).replace('.', ',')}
+                    € {dados.precoAtual.toFixed(2).replace('.', ',')}
                   </p>
-                  <p className="text-sm text-slate-600">12x R$ {parcela}</p>
+                  <p className="text-sm text-slate-600">12x € {parcela}</p>
                 </div>
 
                 <p className="flex items-center justify-center gap-2 rounded-xl bg-slate-50 border border-slate-200 py-3 font-semibold text-base text-slate-800 lg:justify-start">
@@ -165,3 +165,4 @@ export default function Voxcharge() {
     </section>
   )
 }
+

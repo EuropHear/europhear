@@ -6,10 +6,10 @@ import { useLanguage } from '../i18n/LanguageContext'
 import type { Lang } from '../i18n/translations'
 
 const LANGS: { code: Lang; flag: string; label: string }[] = [
-  { code: 'en',    flag: '🇬🇧', label: 'EN' },
-  { code: 'de',    flag: '🇩🇪', label: 'DE' },
-  { code: 'fr',    flag: '🇫🇷', label: 'FR' },
-  { code: 'pt-PT', flag: '🇵🇹', label: 'PT' },
+  { code: 'en',    flag: 'ðŸ‡¬ðŸ‡§', label: 'EN' },
+  { code: 'de',    flag: 'ðŸ‡©ðŸ‡ª', label: 'DE' },
+  { code: 'fr',    flag: 'ðŸ‡«ðŸ‡·', label: 'FR' },
+  { code: 'pt-PT', flag: 'ðŸ‡µðŸ‡¹', label: 'PT' },
 ]
 
 export default function Navbar() {
@@ -81,7 +81,7 @@ export default function Navbar() {
           </div>
 
           <a
-            href="https://wa.me/5532999069763?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20especialista%20da%20Europhear"
+            href="https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-[#008B91] px-4 py-2 rounded font-semibold hover:scale-105 hover:shadow transition-transform duration-200"
@@ -139,7 +139,7 @@ export default function Navbar() {
             {t.navbar.stores}
           </button>
           <a
-            href="https://wa.me/5532999069763"
+            href="https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0"
             target="_blank"
             rel="noopener noreferrer"
             className="block bg-white text-[#008B91] px-4 py-2 rounded font-semibold text-center"

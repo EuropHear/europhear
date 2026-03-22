@@ -90,7 +90,7 @@ export default function Voxton() {
   const economia = (ladoAtual.precoOriginal - ladoAtual.precoAtual).toFixed(2).replace('.', ',')
 
   const whatsappLink =
-    'https://wa.me/5532999069763?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20especialista%20da%20Europhear'
+    'https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0'
 
   const destaquesRapidos = [
     {
@@ -270,17 +270,17 @@ export default function Voxton() {
 
                 <div className="space-y-1 text-center lg:text-left">
                   <p className="line-through text-xs sm:text-sm text-gray-400">
-                    R$ {ladoAtual.precoOriginal.toFixed(2).replace('.', ',')}
+                    € {ladoAtual.precoOriginal.toFixed(2).replace('.', ',')}
                   </p>
                   <p className="text-white text-2xl sm:text-3xl font-bold">
-                    R$ {ladoAtual.precoAtual.toFixed(2).replace('.', ',')}
+                    € {ladoAtual.precoAtual.toFixed(2).replace('.', ',')}
                   </p>
-                  <p className="text-sm text-gray-300">{t.product.save} R$ {economia}</p>
+                  <p className="text-sm text-gray-300">{t.product.save} € {economia}</p>
                 </div>
 
                 <p className="flex items-center justify-center gap-2 rounded-xl bg-[#028794]/10 py-3 font-semibold text-base text-[#7de8ff] lg:justify-start">
                   <HiOutlineCreditCard className="text-xl" />
-                  12x R$ 61,04
+                  12x € 61,04
                 </p>
 
                 <div className="grid gap-3 rounded-2xl border border-[#028794]/10 bg-white/5 p-4 sm:grid-cols-3">
@@ -581,3 +581,4 @@ export default function Voxton() {
     </section>
   )
 }
+

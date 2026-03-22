@@ -72,13 +72,13 @@ export default function ProductPage() {
 
           <div>
             <p className="text-gray-500 line-through text-lg md:text-xl">
-              R$ 1.399,00
+              € 1.399,00
             </p>
             <p className="text-4xl md:text-5xl text-[#3ac28b] font-bold">
-              R$ 599,90
+              € 599,90
             </p>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-              ou 12x R$ 58,17
+              ou 12x € 58,17
             </p>
           </div>
 
@@ -143,5 +143,6 @@ export default function ProductPage() {
     </section>
   );
 }
+
 
 

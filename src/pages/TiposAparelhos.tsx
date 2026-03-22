@@ -1,4 +1,4 @@
-﻿import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import { HiOutlineCreditCard } from 'react-icons/hi2';
@@ -26,16 +26,18 @@ const renderStars = (nota: number) => {
   return estados;
 };
 
+const voiceProStripeUrl = 'https://buy.stripe.com/eVq7sLe92bImexa7doeUU00';
+
 const aparelhos = [
   {
     sigla: 'Voxton Mini CIC',
     descricao: 'Voxton Aparelho Auditivo Mini CIC RecarregÃ¡vel | Europhear...',
     precoOriginal: 1399.0,
     precoAtual: 599.9,
-    precoParcela: '12x R$ 64,94',
+    precoParcela: '12x € 64,94',
     avaliacoes: 21,
     imagem: voxtonHeroImage,
-    esgotado: false,
+    esgotado: true,
     rota: '/produto/voxton',
     badge: 'CIC',
     nota: 4.3,
@@ -46,14 +48,14 @@ const aparelhos = [
     descricao: 'O Voxcharge une conforto, potÃªncia e discriÃ§Ã£o em um modelo moderno.',
     precoOriginal: 1799.0,
     precoAtual: 1199.9,
-    precoParcela: '12x R$ 116,75',
+    precoParcela: '12x € 116,75',
     avaliacoes: 34,
     imagem: voxchargeHeroImage,
     esgotado: true,
     rota: '/produto/voxcharge',
     badge: 'CIC',
     nota: 4.4,
-    link: 'https://wa.me/553x?text=Ol%C3%A1%2C+gostaria+de+ser+avisado+quando+o+Voxcharge+voltar+ao+estoque.',
+    link: 'https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0',
   },
   
   {
@@ -61,10 +63,10 @@ const aparelhos = [
     descricao: 'Com inteligÃªncia artificial, o IAvoice se adapta ao ambiente.',
     precoOriginal: 1999.0,
     precoAtual: 1699.0,
-    precoParcela: '12x R$ 216,36',
+    precoParcela: '12x € 216,36',
     avaliacoes: 51,
     imagem: iaVoiceHeroImage,
-    esgotado: false,
+    esgotado: true,
     rota: '/produto/iavoice',
     badge: 'IA',
     nota: 4.6,
@@ -75,10 +77,10 @@ const aparelhos = [
     descricao: 'Controle total da audiÃ§Ã£o com app e 32 canais de personalizaÃ§Ã£o.',
     precoOriginal: 2899.0,
     precoAtual: 1999.0,
-    precoParcela: '12x R$ 216,36',
+    precoParcela: '12x € 216,36',
     avaliacoes: 42,
     imagem: vitalAirHeroImage,
-    esgotado: false,
+    esgotado: true,
     rota: '/produto/vitalair',
     badge: 'TWS',
     nota: 4.8,
@@ -88,15 +90,16 @@ const aparelhos = [
     sigla: 'VoicePro Profissional',
     descricao: 'Alta performance para ambientes ruidosos com 48 canais.',
     precoOriginal: 2099.0,
-    precoAtual: 1499.0,
-    precoParcela: '12x R$ 162,24',
+    precoAtual: 199.0,
+    precoParcela: '12x € 16,58',
     avaliacoes: 47,
     imagem: voiceProHeroImage,
     esgotado: false,
     rota: '/produto/voicepro',
     badge: 'CIC',
     nota: 4.5,
-    link: 'https://europhear.pay.yampi.com.br/r/EXEMPLOVOICEPRO',
+    link: voiceProStripeUrl,
+    checkoutUrl: voiceProStripeUrl,
   },
 ];
 
@@ -169,8 +172,8 @@ export default function TiposAparelhos() {
                     </span>
                   </div>
 
-                  <p className="line-through text-gray-400 text-sm mb-0">R$ {precoOriginal}</p>
-                  <p className="text-[#213547] text-sm font-semibold mb-1">R$ {precoAtual}</p>
+                  <p className="line-through text-gray-400 text-sm mb-0">€ {precoOriginal}</p>
+                  <p className="text-[#213547] text-sm font-semibold mb-1">€ {precoAtual}</p>
 
                   <p className="flex items-center gap-2 text-[#213547] font-bold text-xl mb-3">
                     <HiOutlineCreditCard className="text-lg" />
@@ -189,12 +192,23 @@ export default function TiposAparelhos() {
                         Avise-me
                       </a>
                     ) : (
-                      <Link
-                        to={item.rota}
-                        className="bg-[#007c91] hover:bg-[#005f6e] text-white text-sm px-4 py-2 rounded-lg font-medium transition"
-                      >
-                        Compre Agora 
-                      </Link>
+                      item.checkoutUrl ? (
+                        <a
+                          href={item.checkoutUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-[#007c91] hover:bg-[#005f6e] text-white text-sm px-4 py-2 rounded-lg font-medium transition"
+                        >
+                          Compre Agora
+                        </a>
+                      ) : (
+                        <Link
+                          to={item.rota}
+                          className="bg-[#007c91] hover:bg-[#005f6e] text-white text-sm px-4 py-2 rounded-lg font-medium transition"
+                        >
+                          Compre Agora
+                        </Link>
+                      )
                     )}
                   </div>
                 </div>
@@ -215,6 +229,7 @@ export default function TiposAparelhos() {
     </div>
   );
 }
+
 
 
 

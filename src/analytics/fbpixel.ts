@@ -149,7 +149,7 @@ export function trackPageView() {
 }
 
 /**
- * trackEvent("Purchase", { value: 10, currency: "BRL" }, { eventID })
+ * trackEvent("Purchase", { value: 10, currency: "EUR" }, { eventID })
  */
 export function trackEvent(
   name: string,

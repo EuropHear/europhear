@@ -17,8 +17,8 @@
     <!-- /Microsoft Clarity -->
 
     <!-- Meta Pixel
-         NOTE: o carregamento real do Pixel é feito no React (fbpixel.ts/useMeta).
-         Não inclua aqui o snippet JS do fbq para evitar PageView duplicado. -->
+         NOTE: carregamento real do Pixel e feito no React (fbpixel.ts/useMeta).
+         Nao inclua aqui o snippet JS do fbq para evitar PageView duplicado. -->
   </head>
 
   <body>
@@ -26,43 +26,25 @@
     
     <!-- /Meta Pixel -->
 
-    <!-- Botão flutuante WhatsApp -->
-    <style>
-      #whatsapp-float {
-        position: fixed;
-        bottom: 24px;
-        right: 18px;
-        z-index: 9999;
-        width: 54px;
-        height: 54px;
-        border-radius: 50%;
-        background-color: #25d366;
-        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
-        display: grid;
-        place-items: center;
-        text-decoration: none;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-      #whatsapp-float:hover {
-        transform: translateY(-2px) scale(1.03);
-        box-shadow: 0 12px 24px rgba(37, 211, 102, 0.45);
-      }
-      #whatsapp-float img {
-        width: 26px;
-        height: 26px;
-      }
-    </style>
 
     <div id="root"></div>
 
-    <a id="whatsapp-float"
-       href="https://wa.me/5532999069763?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20os%20aparelhos%20auditivos%20Europhear"
-       target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
-      <img src="https://static.whatsapp.net/rsrc.php/v3/yP/r/rYZqPCBaG70.png" alt="WhatsApp" />
-    </a>
-
     <!-- Script principal Vite/React -->
     <script type="module" src="/src/main.tsx"></script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/69bf5403977ac51c36884631/1jk9m0bi0';
+        s1.charset="UTF-8";
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
 
     <!-- Yampi Buy Button (opcional)
     <script

@@ -1,4 +1,4 @@
-export type Lang = 'en' | 'de' | 'fr' | 'pt-PT';
+﻿export type Lang = 'en' | 'de' | 'fr' | 'pt-PT';
 
 export const translations = {
   en: {
@@ -164,7 +164,7 @@ export const translations = {
       vitalair: {
         nome: 'Vital Air Intelligent Bluetooth',
         descricao: 'Intelligent hearing aid with Bluetooth connectivity, modern lightweight design, full app control and optimized performance for calls, music and sound amplification.',
-        precoParcela: '12x R$ 216.36',
+        precoParcela: '12x € 216.36',
         destaquesRapidos: [
           { titulo: 'App Control', descricao: 'Full volume, modes and equalizer adjustments directly on your smartphone.' },
           { titulo: 'Stable Bluetooth', descricao: 'Calls, music and videos without interruption with auto-reconnect.' },
@@ -411,7 +411,7 @@ export const translations = {
       vitalair: {
         nome: 'Vital Air Intelligentes Bluetooth',
         descricao: 'Intelligentes Hörgerät mit Bluetooth-Konnektivität, modernem leichtem Design, vollständiger App-Steuerung und optimierter Leistung für Anrufe, Musik und Klangverstärkung.',
-        precoParcela: '12x R$ 216,36',
+        precoParcela: '12x € 216,36',
         destaquesRapidos: [
           { titulo: 'App-Steuerung', descricao: 'Vollständige Lautstärke-, Modi- und Equalizereinstellungen direkt auf Ihrem Smartphone.' },
           { titulo: 'Stabiles Bluetooth', descricao: 'Anrufe, Musik und Videos ohne Unterbrechung mit automatischer Wiederverbindung.' },
@@ -584,7 +584,7 @@ export const translations = {
       vitalair: {
         nome: 'Vital Air Bluetooth Intelligent',
         descricao: 'Aide auditive intelligente avec connectivité Bluetooth, design moderne et léger, contrôle complet via application et performances optimisées pour les appels, la musique et l\'amplification sonore.',
-        precoParcela: '12x R$ 216,36',
+        precoParcela: '12x € 216,36',
         destaquesRapidos: [
           { titulo: 'Contrôle via App', descricao: 'Réglages complets du volume, des modes et de l\'égaliseur directement sur votre smartphone.' },
           { titulo: 'Bluetooth Stable', descricao: 'Appels, musique et vidéos sans interruption avec reconnexion automatique.' },
@@ -757,7 +757,7 @@ export const translations = {
       vitalair: {
         nome: 'Vital Air Bluetooth Inteligente',
         descricao: 'Aparelho auditivo inteligente com conectividade Bluetooth, design moderno e leve, controlo total via aplicação e desempenho otimizado para chamadas, música e amplificação sonora.',
-        precoParcela: '12x R$ 216,36',
+        precoParcela: '12x € 216,36',
         destaquesRapidos: [
           { titulo: 'Controlo via app', descricao: 'Ajustes completos de volume, modos e equalização direto no smartphone.' },
           { titulo: 'Bluetooth estável', descricao: 'Chamadas, músicas e vídeos sem interrupções com reconexão automática.' },
@@ -769,3 +769,4 @@ export const translations = {
 } as const;
 
 export type Translations = typeof translations['en'];
+

@@ -25,6 +25,8 @@ import voiceProBeneficios from '../assets/voicepro/VoiceProBenficios.jpg'
 import certificadosImg from '../assets/voicepro/certificados.png'
 import garantiaImg from '../assets/2anos.png'
 
+const voiceProStripeUrl = 'https://buy.stripe.com/eVq7sLe92bImexa7doeUU00'
+
 export const voiceProGallery = [
   { src: voiceProEsterilizacao, alt: 'VoicePro em estojo com esterilização UV' },
   { src: frenteVoicePro, alt: 'Vista frontal do VoicePro' },
@@ -54,18 +56,19 @@ export default function VoicePro() {
     descricao:
       'Aparelho auditivo recarregável com design CIC (Completely-in-Canal), que combina tecnologia inteligente, conforto auditivo e esterilização UV integrada. Desenvolvido para oferecer clareza sonora natural e segura em diversos ambientes, com recarga magnética e display digital LED de alta definição.',
     precoOriginal: 2099,
-    precoAtual: 1499.0,
+    precoAtual: 199.0,
     parcelas: 12,
     avaliacoes: 47,
     nota: 4.5,
-    link: 'https://europhearltda.pay.yampi.com.br/r/OYG2SSJH1K'
+    link: voiceProStripeUrl
   }
 
   const [imagemSelecionada, setImagemSelecionada] = useState<string>(imagensGaleria[0].src)
   const economia = (dados.precoOriginal - dados.precoAtual).toFixed(2).replace('.', ',')
+  const valorParcela = (dados.precoAtual / dados.parcelas).toFixed(2).replace('.', ',')
 
   const whatsappLink =
-    'https://wa.me/5532999069763?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20especialista%20da%20Europhear'
+    'https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0'
 
   const destaquesRapidos = [
     {
@@ -240,17 +243,17 @@ export default function VoicePro() {
 
                 <div className="space-y-1 text-center lg:text-left">
                   <p className="line-through text-xs sm:text-sm text-gray-400">
-                    R$ {dados.precoOriginal.toFixed(2).replace('.', ',')}
+                    € {dados.precoOriginal.toFixed(2).replace('.', ',')}
                   </p>
                   <p className="text-white text-2xl sm:text-3xl font-bold">
-                    R$ {dados.precoAtual.toFixed(2).replace('.', ',')}
+                    € {dados.precoAtual.toFixed(2).replace('.', ',')}
                   </p>
-                  <p className="text-sm text-gray-300">{t.product.save} R$ {economia}</p>
+                  <p className="text-sm text-gray-300">{t.product.save} € {economia}</p>
                 </div>
 
                 <p className="flex items-center justify-center gap-2 rounded-xl bg-[#028794]/10 py-3 font-semibold text-base text-[#7de8ff] lg:justify-start">
                   <HiOutlineCreditCard className="text-xl" />
-                  12x R$ 152,63
+                  12x € {valorParcela}
                 </p>
 
                 <div className="grid gap-3 rounded-2xl border border-[#028794]/10 bg-white/5 p-4 sm:grid-cols-3">
@@ -572,3 +575,4 @@ export default function VoicePro() {
     </section>
   )
 }
+

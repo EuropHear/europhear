@@ -108,7 +108,7 @@ app.post('/api/meta/capi/purchase', async (req, res) => {
         user_data: ud,
         custom_data: {
           value,                 // number
-          currency,              // 'BRL'
+          currency,              // 'EUR'
           contents,              // ideal incluir content_ids e content_type
           // content_ids: ['sku-123'],
           // content_type: 'product',

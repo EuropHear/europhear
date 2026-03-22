@@ -21,7 +21,7 @@ import garantiaImg from '../assets/2anos.png'
 
 export const smartVoiceGallery = [
   { src: img1, alt: 'SmartVoice no estojo de carga' },
-  { src: img2, alt: 'SmartVoice ângulo lateral' },
+  { src: img2, alt: 'SmartVoice Ã¢ngulo lateral' },
   { src: img3, alt: 'SmartVoice e display LED' },
   { src: img4, alt: 'SmartVoice detalhe do fone' }
 ]
@@ -39,13 +39,13 @@ export default function SmartVoice() {
     sigla: 'SmartVoice | Europhear',
     nome: 'SmartVoice Bluetooth Inteligente | Europhear',
     descricao:
-      'Fones auditivos TWS com cancelamento de ruído, app de ajuste fino e estojo de recarga com display LED para 24h de autonomia.',
+      'Fones auditivos TWS com cancelamento de ruÃ­do, app de ajuste fino e estojo de recarga com display LED para 24h de autonomia.',
     precoOriginal: 1899,
     precoAtual: 1399.9,
     parcelas: 12,
     avaliacoes: 18,
     nota: 4.5,
-    link: 'https://wa.me/55329999069763?text=Ol%C3%A1%2C%20quero%20comprar%20o%20SmartVoice'
+    link: 'https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0'
   }
 
   const [imagemSelecionada, setImagemSelecionada] = useState<string>(smartVoiceGallery[0].src)
@@ -55,7 +55,7 @@ export default function SmartVoice() {
   const destaquesRapidos = [
     {
       icon: HiOutlineClipboardDocumentCheck,
-      titulo: 'Configuração guiada',
+      titulo: 'ConfiguraÃ§Ã£o guiada',
       descricao: 'App de controle com perfis prontos e suporte remoto.'
     },
     {
@@ -71,37 +71,37 @@ export default function SmartVoice() {
   ]
 
   const caracteristicasPrincipais = [
-    { funcao: 'Bluetooth 5.2', descricao: 'Latência baixa para chamadas e músicas, mantendo clareza vocal.' },
+    { funcao: 'Bluetooth 5.2', descricao: 'LatÃªncia baixa para chamadas e mÃºsicas, mantendo clareza vocal.' },
     { funcao: 'App dedicado', descricao: 'Equalizador simples, ajuste de ganho e perfis de ambiente.' },
-    { funcao: 'Noise Reduction', descricao: 'Supressão de ruído de fundo para diálogos mais nítidos.' },
-    { funcao: 'Estojo LED', descricao: 'Display digital indica o nível individual de cada fone e do estojo.' },
-    { funcao: 'Modo Transparência', descricao: 'Permite ouvir o ambiente sem remover os fones.' },
-    { funcao: 'Ergonomia TWS', descricao: 'Formato anatômico para uso prolongado com conforto.' }
+    { funcao: 'Noise Reduction', descricao: 'SupressÃ£o de ruÃ­do de fundo para diÃ¡logos mais nÃ­tidos.' },
+    { funcao: 'Estojo LED', descricao: 'Display digital indica o nÃ­vel individual de cada fone e do estojo.' },
+    { funcao: 'Modo TransparÃªncia', descricao: 'Permite ouvir o ambiente sem remover os fones.' },
+    { funcao: 'Ergonomia TWS', descricao: 'Formato anatÃ´mico para uso prolongado com conforto.' }
   ]
 
   const bateriaCarregamento = [
-    { titulo: 'Tipo de carregamento', descricao: 'Via estojo com contatos magnéticos.' },
-    { titulo: 'Autonomia', descricao: 'Até 24h totais com recargas do estojo.' },
+    { titulo: 'Tipo de carregamento', descricao: 'Via estojo com contatos magnÃ©ticos.' },
+    { titulo: 'Autonomia', descricao: 'AtÃ© 24h totais com recargas do estojo.' },
     { titulo: 'Tempo de carga', descricao: '~2h para estojo completo.' },
     { titulo: 'Indicador', descricao: 'Display LED com porcentagem individual L/R.' }
   ]
 
   const controleSom = [
-    { titulo: 'Perfis rápidos', descricao: 'Silencioso, urbano e música pelo app.' },
-    { titulo: 'Ajuste fino', descricao: 'Equalizador de agudos/médios/graves direto no celular.' },
+    { titulo: 'Perfis rÃ¡pidos', descricao: 'Silencioso, urbano e mÃºsica pelo app.' },
+    { titulo: 'Ajuste fino', descricao: 'Equalizador de agudos/mÃ©dios/graves direto no celular.' },
     { titulo: 'Anti-feedback', descricao: 'Reduz assovios ao ajustar volume.' }
   ]
 
   const higieneSeguranca = [
-    'Ponteiras de silicone macias e hipoalergênicas.',
+    'Ponteiras de silicone macias e hipoalergÃªnicas.',
     'Estojo fechado protege contra poeira e umidade durante a carga.'
   ]
 
   const certificacoes = [
-    'CE (Conformité Européenne)',
+    'CE (ConformitÃ© EuropÃ©enne)',
     'RoHS (Restriction of Hazardous Substances)',
     'FCC (Federal Communications Commission)',
-    'ISO / Licença de produção de dispositivos médicos'
+    'ISO / LicenÃ§a de produÃ§Ã£o de dispositivos mÃ©dicos'
   ]
 
   const conteudoEmbalagem = [
@@ -109,12 +109,10 @@ export default function SmartVoice() {
     'Estojo de carregamento com display LED',
     'Cabo USB de carga',
     '3 pares de pontas de silicone (S, M, L)',
-    'Manual do usuário'
+    'Manual do usuÃ¡rio'
   ]
 
-  const whatsappLink = `https://wa.me/55329999069763?text=${encodeURIComponent(
-    `Olá, quero saber mais sobre o ${dados.nome}`
-  )}`
+  const whatsappLink = 'https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0'
 
   return (
     <section className="pt-32 min-h-screen hero-bg grid-bg font-[Inter] text-white">
@@ -123,7 +121,7 @@ export default function SmartVoice() {
           <div className="text-center lg:text-left">
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">{dados.nome}</h1>
             <p className="text-[#7de8ff] font-semibold text-sm sm:text-base">
-              Conectividade avançada, app dedicado e estojo inteligente com display LED.
+              Conectividade avanÃ§ada, app dedicado e estojo inteligente com display LED.
             </p>
           </div>
 
@@ -150,17 +148,17 @@ export default function SmartVoice() {
 
                 <div className="space-y-1 text-center lg:text-left">
                   <p className="line-through text-xs sm:text-sm text-gray-400">
-                    R$ {dados.precoOriginal.toFixed(2).replace('.', ',')}
+                    € {dados.precoOriginal.toFixed(2).replace('.', ',')}
                   </p>
                   <p className="text-white text-2xl sm:text-3xl font-bold">
-                    R$ {dados.precoAtual.toFixed(2).replace('.', ',')}
+                    € {dados.precoAtual.toFixed(2).replace('.', ',')}
                   </p>
-                  <p className="text-sm text-gray-300">{t.product.save} R$ {economia}</p>
+                  <p className="text-sm text-gray-300">{t.product.save} € {economia}</p>
                 </div>
 
                 <p className="flex items-center justify-center gap-2 rounded-xl bg-[#028794]/10 py-3 font-semibold text-base text-[#7de8ff] lg:justify-start">
                   <HiOutlineCreditCard className="text-xl" />
-                  12x R$ {(dados.precoAtual / dados.parcelas).toFixed(2).replace('.', ',')}
+                  12x € {(dados.precoAtual / dados.parcelas).toFixed(2).replace('.', ',')}
                 </p>
 
                 <div className="grid gap-3 rounded-2xl border border-[#028794]/10 bg-white/5 p-4 sm:grid-cols-3">
@@ -189,7 +187,7 @@ export default function SmartVoice() {
 
       <section className="w-full section-dark py-12 px-4 text-base lg:text-lg">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-6">⚙️ {t.product.mainFeatures}</h2>
+          <h2 className="text-2xl font-semibold mb-6">âš™ï¸ {t.product.mainFeatures}</h2>
           <div className="overflow-x-auto">
             <table className="w-full border border-white/15 rounded-xl overflow-hidden">
               <thead className="section-gradient text-white text-left">
@@ -217,11 +215,11 @@ export default function SmartVoice() {
           <ul className="grid gap-3 text-white md:grid-cols-2">
             <li className="flex items-start gap-3 rounded-2xl border border-white/20 bg-white/10 p-4">
               <FaCheckCircle className="text-green-300 mt-1 shrink-0" />
-              <span>Streaming direto do celular com latência reduzida.</span>
+              <span>Streaming direto do celular com latÃªncia reduzida.</span>
             </li>
             <li className="flex items-start gap-3 rounded-2xl border border-white/20 bg-white/10 p-4">
               <FaCheckCircle className="text-green-300 mt-1 shrink-0" />
-              <span>App com ajuste fino e perfis rápidos para diferentes ambientes.</span>
+              <span>App com ajuste fino e perfis rÃ¡pidos para diferentes ambientes.</span>
             </li>
             <li className="flex items-start gap-3 rounded-2xl border border-white/20 bg-white/10 p-4">
               <FaCheckCircle className="text-green-300 mt-1 shrink-0" />
@@ -248,7 +246,7 @@ export default function SmartVoice() {
       <section className="w-full bg-white/5 py-12 px-4 text-base lg:text-lg">
         <div className="max-w-5xl mx-auto grid gap-8 lg:grid-cols-2">
           <div className="bg-[#f9fafb] border border-white/15 rounded-2xl p-6">
-            <h3 className="text-xl font-semibold mb-4 text-[#7de8ff]">🔈 Controle de Som</h3>
+            <h3 className="text-xl font-semibold mb-4 text-[#7de8ff]">ðŸ”ˆ Controle de Som</h3>
             <ul className="space-y-3 text-gray-300">
               {controleSom.map(item => (
                 <li key={item.titulo} className="flex gap-2">
@@ -262,7 +260,7 @@ export default function SmartVoice() {
             </ul>
           </div>
           <div className="bg-white/5 border border-white/15 rounded-2xl p-6">
-            <h3 className="text-xl font-semibold mb-4 text-[#047857]">🧴 Higiene e Segurança</h3>
+            <h3 className="text-xl font-semibold mb-4 text-[#047857]">ðŸ§´ Higiene e SeguranÃ§a</h3>
             <ul className="space-y-3 text-gray-300">
               {higieneSeguranca.map(item => (
                 <li key={item} className="flex gap-2">
@@ -277,7 +275,7 @@ export default function SmartVoice() {
 
       <section className="w-full section-dark py-12 px-4 text-base lg:text-lg">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-6 text-center">🔋 {t.product.battery}</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-center">ðŸ”‹ {t.product.battery}</h2>
           <div className="overflow-x-auto">
             <table className="w-full border border-white/15 rounded-xl overflow-hidden">
               <tbody className="bg-white/5">
@@ -296,9 +294,9 @@ export default function SmartVoice() {
       <section className="w-full bg-white/5 py-12 px-4 text-base lg:text-lg">
         <div className="max-w-5xl mx-auto grid gap-8 lg:grid-cols-2">
           <div className="space-y-4">
-            <h3 className="text-2xl font-semibold text-[#7de8ff] flex items-center gap-2">📑 {t.product.certifications}</h3>
+            <h3 className="text-2xl font-semibold text-[#7de8ff] flex items-center gap-2">ðŸ“‘ {t.product.certifications}</h3>
             <p className="text-gray-300">
-              Estes certificados asseguram que o SmartVoice cumpre normas internacionais de segurança, eficiência e biocompatibilidade.
+              Estes certificados asseguram que o SmartVoice cumpre normas internacionais de seguranÃ§a, eficiÃªncia e biocompatibilidade.
             </p>
             <ul className="space-y-2 text-gray-200">
               {certificacoes.map(item => (
@@ -317,7 +315,7 @@ export default function SmartVoice() {
 
       <section className="w-full bg-white/5 py-12 px-4 text-base lg:text-lg">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-6 text-center">📦 {t.product.boxContents}</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-center">ðŸ“¦ {t.product.boxContents}</h2>
           <div className="grid gap-4 sm:grid-cols-2">
             {conteudoEmbalagem.map(item => (
               <div key={item} className="rounded-2xl border border-[#028794]/20 bg-white/5 px-5 py-4 text-white">
@@ -331,7 +329,7 @@ export default function SmartVoice() {
       <section className="w-full bg-gradient-to-r from-[#028794] to-[#006d7e] py-12 px-4 text-white">
         <div className="max-w-5xl mx-auto flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-3 text-center lg:text-left">
-            <h3 className="text-2xl font-bold">Pronto para elevar sua audição com o SmartVoice?</h3>
+            <h3 className="text-2xl font-bold">Pronto para elevar sua audiÃ§Ã£o com o SmartVoice?</h3>
             <p className="text-sm sm:text-base text-white/90">
               Ajuste guiado pelo app, conforto TWS e autonomia para o dia todo.
             </p>
@@ -359,9 +357,9 @@ export default function SmartVoice() {
 
       <section className="w-full section-dark py-12 px-4 text-base lg:text-lg">
         <div className="max-w-3xl mx-auto border border-green-300 rounded-2xl text-center p-6">
-          <p className="text-lg font-semibold text-green-700 mb-2">Garantia de 1 ano de fábrica Europhear</p>
+          <p className="text-lg font-semibold text-green-700 mb-2">Garantia de 1 ano de fÃ¡brica Europhear</p>
           <p className="text-gray-300">
-            Troca imediata em caso de defeito de fabricação. Atendimento dedicado via WhatsApp com especialistas audiológicos.
+            Troca imediata em caso de defeito de fabricaÃ§Ã£o. Atendimento dedicado via WhatsApp com especialistas audiolÃ³gicos.
           </p>
         </div>
       </section>
@@ -388,3 +386,4 @@ export default function SmartVoice() {
     </section>
   )
 }
+

@@ -27,7 +27,8 @@ import { voiceProHeroImage } from './produtos/VoicePro';
 import { smartVoiceHeroImage } from './produtos/SmartVoice';
 import { softVoiceHeroImage } from './produtos/SoftVoice';
 
-const whatsappBase = 'https://wa.me/5532999069763?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20especialista%20da%20Europhear';
+const whatsappBase = 'https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0';
+const voiceProStripeUrl = 'https://buy.stripe.com/eVq7sLe92bImexa7doeUU00';
 const heroVideoId = 'Z4-1AfiPFQ0';
 
 const renderStars = (nota: number) => {
@@ -51,7 +52,7 @@ const aparelhosBase = [
     precoAtual: 1999.0,
     avaliacoes: 42,
     imagem: vitalAirHeroImage,
-    esgotado: false,
+    esgotado: true,
     rota: '/produto/vitalair',
     badge: 'TWS',
     nota: 4.8,
@@ -65,7 +66,7 @@ const aparelhosBase = [
     precoAtual: 599.9,
     avaliacoes: 21,
     imagem: voxtonHeroImage,
-    esgotado: false,
+    esgotado: true,
     rota: '/produto/voxton',
     badge: 'CIC',
     nota: 4.3,
@@ -74,12 +75,12 @@ const aparelhosBase = [
   },
   {
     sigla: 'IAvoice',
-    nome: 'IAvoice Inteligência Auditiva',
+    nome: 'IAvoice InteligÃªncia Auditiva',
     precoOriginal: 1999.0,
     precoAtual: 1699.0,
     avaliacoes: 51,
     imagem: iaVoiceHeroImage,
-    esgotado: false,
+    esgotado: true,
     rota: '/produto/iavoice',
     badge: 'IA',
     nota: 4.6,
@@ -90,14 +91,15 @@ const aparelhosBase = [
     sigla: 'VoicePro',
     nome: 'VoicePro Profissional Digital',
     precoOriginal: 2099.0,
-    precoAtual: 1499.0,
+    precoAtual: 199.0,
     avaliacoes: 47,
     imagem: voiceProHeroImage,
     esgotado: false,
     rota: '/produto/voicepro',
     badge: 'PRO',
     nota: 4.5,
-    link: whatsappBase,
+    link: voiceProStripeUrl,
+    checkoutUrl: voiceProStripeUrl,
     destaque: true,
     descKey: 'voicepro',
   },
@@ -108,7 +110,7 @@ const aparelhosBase = [
     precoAtual: 1999.9,
     avaliacoes: 18,
     imagem: smartVoiceHeroImage,
-    esgotado: false,
+    esgotado: true,
     rota: '/produto/smartvoice',
     badge: 'BT',
     nota: 4.5,
@@ -118,12 +120,12 @@ const aparelhosBase = [
   },
   {
     sigla: 'SoftVoice',
-    nome: 'SoftVoice Recarregável 16 Canais',
+    nome: 'SoftVoice RecarregÃ¡vel 16 Canais',
     precoOriginal: 4499.0,
     precoAtual: 2699.9,
     avaliacoes: 15,
     imagem: softVoiceHeroImage,
-    esgotado: false,
+    esgotado: true,
     rota: '/produto/softvoice',
     badge: 'CIC',
     nota: 4.4,
@@ -133,7 +135,7 @@ const aparelhosBase = [
   },
   {
     sigla: 'Voxcharge',
-    nome: 'Voxcharge Mini CIC Recarregável',
+    nome: 'Voxcharge Mini CIC RecarregÃ¡vel',
     precoOriginal: 1799.0,
     precoAtual: 1199.9,
     avaliacoes: 34,
@@ -164,46 +166,46 @@ const productDescs: Record<string, Record<string, string>> = {
     iavoice: '16-Kanal-Digitalchip, LED-Display, BTE-Design',
     voicepro: 'UV-Sterilisation, magnetisches Laden, 24h Akku',
     smartvoice: 'Diskretes CIC, BT-Streaming, 4-6h + Magnetetui',
-    softvoice: 'Importierter Chip, 16 Kanäle, 20h mit UV/LED-Etui',
-    voxcharge: 'CIC wiederaufladbar, 117dB Verstärkung, 20h Akku',
+    softvoice: 'Importierter Chip, 16 KanÃ¤le, 20h mit UV/LED-Etui',
+    voxcharge: 'CIC wiederaufladbar, 117dB VerstÃ¤rkung, 20h Akku',
   },
   fr: {
-    vitalair: 'Bluetooth 5.0, app de contrôle, DSP 32 canaux',
+    vitalair: 'Bluetooth 5.0, app de contrÃ´le, DSP 32 canaux',
     voxton: 'Design discret, batterie 60h, utilisation facile',
-    iavoice: 'Puce numérique 16 canaux, affichage LED, design BTE',
-    voicepro: 'Stérilisation UV, chargement magnétique, batterie 24h',
-    smartvoice: 'CIC discret, streaming BT, 4-6h + étui magnétique',
-    softvoice: 'Puce importée, 16 canaux, 20h avec étui UV/LED',
+    iavoice: 'Puce numÃ©rique 16 canaux, affichage LED, design BTE',
+    voicepro: 'StÃ©rilisation UV, chargement magnÃ©tique, batterie 24h',
+    smartvoice: 'CIC discret, streaming BT, 4-6h + Ã©tui magnÃ©tique',
+    softvoice: 'Puce importÃ©e, 16 canaux, 20h avec Ã©tui UV/LED',
     voxcharge: 'CIC rechargeable, gain 117dB, batterie 20h',
   },
   'pt-PT': {
     vitalair: 'Bluetooth 5.0, app de controlo, 32 canais DSP',
-    voxton: 'Design discreto, bateria 60h, fácil operação',
+    voxton: 'Design discreto, bateria 60h, fÃ¡cil operaÃ§Ã£o',
     iavoice: 'Chip digital 16 canais, display LED, design BTE',
-    voicepro: 'Esterilização UV, carregamento magnético, bateria 24h',
-    smartvoice: 'CIC discreto, streaming BT, 4-6h + estojo magnético',
+    voicepro: 'EsterilizaÃ§Ã£o UV, carregamento magnÃ©tico, bateria 24h',
+    smartvoice: 'CIC discreto, streaming BT, 4-6h + estojo magnÃ©tico',
     softvoice: 'Chip importado, 16 canais, 20h com estojo UV/LED',
-    voxcharge: 'CIC recarregável, ganho 117dB, bateria 20h',
+    voxcharge: 'CIC recarregÃ¡vel, ganho 117dB, bateria 20h',
   },
 };
 
 // Installments per language
 const installmentsByLang: Record<string, Record<string, string>> = {
   en: {
-    vitalair: '12x R$ 216.36', voxton: '12x R$ 64.94', iavoice: '12x R$ 216.36',
-    voicepro: '12x R$ 162.24', smartvoice: '12x R$ 166.66', softvoice: '12x R$ 224.99', voxcharge: '12x R$ 116.75',
+    vitalair: '12x € 216.36', voxton: '12x € 64.94', iavoice: '12x € 216.36',
+    voicepro: '12x € 16.58', smartvoice: '12x € 166.66', softvoice: '12x € 224.99', voxcharge: '12x € 116.75',
   },
   de: {
-    vitalair: '12x R$ 216,36', voxton: '12x R$ 64,94', iavoice: '12x R$ 216,36',
-    voicepro: '12x R$ 162,24', smartvoice: '12x R$ 166,66', softvoice: '12x R$ 224,99', voxcharge: '12x R$ 116,75',
+    vitalair: '12x € 216,36', voxton: '12x € 64,94', iavoice: '12x € 216,36',
+    voicepro: '12x € 16,58', smartvoice: '12x € 166,66', softvoice: '12x € 224,99', voxcharge: '12x € 116,75',
   },
   fr: {
-    vitalair: '12x R$ 216,36', voxton: '12x R$ 64,94', iavoice: '12x R$ 216,36',
-    voicepro: '12x R$ 162,24', smartvoice: '12x R$ 166,66', softvoice: '12x R$ 224,99', voxcharge: '12x R$ 116,75',
+    vitalair: '12x € 216,36', voxton: '12x € 64,94', iavoice: '12x € 216,36',
+    voicepro: '12x € 16,58', smartvoice: '12x € 166,66', softvoice: '12x € 224,99', voxcharge: '12x € 116,75',
   },
   'pt-PT': {
-    vitalair: '12x R$ 216,36', voxton: '12x R$ 64,94', iavoice: '12x R$ 216,36',
-    voicepro: '12x R$ 162,24', smartvoice: '12x R$ 166,66', softvoice: '12x R$ 224,99', voxcharge: '12x R$ 116,75',
+    vitalair: '12x € 216,36', voxton: '12x € 64,94', iavoice: '12x € 216,36',
+    voicepro: '12x € 16,58', smartvoice: '12x € 166,66', softvoice: '12x € 224,99', voxcharge: '12x € 116,75',
   },
 };
 
@@ -295,10 +297,10 @@ export default function App() {
                 <p className="text-sm text-gray-400 mb-1">{h.fromPrice}</p>
                 <div className="flex items-baseline gap-3 mb-2">
                   <span className="text-3xl font-bold text-white">
-                    R$ {featuredProduct.precoAtual.toFixed(2).replace('.', ',')}
+                    € {featuredProduct.precoAtual.toFixed(2).replace('.', ',')}
                   </span>
                   <span className="text-sm text-gray-500 line-through">
-                    R$ {featuredProduct.precoOriginal.toFixed(2).replace('.', ',')}
+                    € {featuredProduct.precoOriginal.toFixed(2).replace('.', ',')}
                   </span>
                 </div>
                 <p className="text-sm text-gray-400">{featuredProduct.precoParcela}</p>
@@ -433,10 +435,10 @@ export default function App() {
                     {/* Price */}
                     <div className="mb-4">
                       <p className="text-xs text-gray-500 line-through">
-                        R$ {item.precoOriginal.toFixed(2).replace('.', ',')}
+                        € {item.precoOriginal.toFixed(2).replace('.', ',')}
                       </p>
                       <p className="text-xl font-bold text-[#008B91]">
-                        R$ {item.precoAtual.toFixed(2).replace('.', ',')}
+                        € {item.precoAtual.toFixed(2).replace('.', ',')}
                       </p>
                       <p className="text-sm font-semibold text-[#006d7e]">{item.precoParcela}</p>
                     </div>
@@ -453,13 +455,25 @@ export default function App() {
                           {p.notifyMe}
                         </a>
                       ) : (
-                        <Link
-                          to={item.rota}
-                          className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg btn-3d text-sm"
-                        >
-                          {p.seeProduct}
-                          <ChevronRight size={16} />
-                        </Link>
+                        item.checkoutUrl ? (
+                          <a
+                            href={item.checkoutUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg btn-3d text-sm"
+                          >
+                            {p.seeProduct}
+                            <ChevronRight size={16} />
+                          </a>
+                        ) : (
+                          <Link
+                            to={item.rota}
+                            className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg btn-3d text-sm"
+                          >
+                            {p.seeProduct}
+                            <ChevronRight size={16} />
+                          </Link>
+                        )
                       )}
                     </div>
                   </div>
@@ -586,3 +600,4 @@ export default function App() {
     </div>
   );
 }
+

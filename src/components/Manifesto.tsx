@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import logo from '../assets/logomarca.png';
 import consultorio from '../assets/consultorio.jpeg';
 import imgPorques from '../assets/img-porques-v2.webp';
@@ -51,7 +51,7 @@ export default function Manifesto() {
         <div className="mt-12 flex flex-col items-center">
           <img src={logo} alt="Logo Europhear" className="h-20 w-auto mb-6" />
           <a
-            href="https://wa.me/5532999069763?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20especialista%20da%20Europhear"
+            href="https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#3ac28b] text-white px-6 py-3 rounded-full font-bold hover:bg-[#34b07f] transition animate-bounce"
@@ -126,7 +126,7 @@ export default function Manifesto() {
 
             <div className="flex justify-center">
               <a
-                href="https://wa.me/5532999069763"
+                href="https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-[#018B92] font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition animate-pulse"

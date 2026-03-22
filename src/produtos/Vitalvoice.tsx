@@ -56,7 +56,7 @@ export default function Vitalvoice() {
   const [imagemSelecionada, setImagemSelecionada] = useState<string>(imagensGaleria[0].src)
 
   const whatsappLink =
-    'https://wa.me/5532999069763?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20especialista%20da%20Europhear'
+    'https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0'
 
 
   const comparativoTecnologia = {
@@ -192,19 +192,19 @@ export default function Vitalvoice() {
 
                 <div className="space-y-1 text-center lg:text-left">
                   <p className="line-through text-xs sm:text-sm text-gray-400">
-                    R$ {dados.precoOriginal.toFixed(2).replace('.', ',')}
+                    € {dados.precoOriginal.toFixed(2).replace('.', ',')}
                   </p>
                   <p className="text-white text-2xl sm:text-3xl font-bold">
-                    R$ {dados.precoAtual.toFixed(2).replace('.', ',')}
+                    € {dados.precoAtual.toFixed(2).replace('.', ',')}
                   </p>
                   <p className="text-sm text-gray-300">
-                    {t.product.save} R$ {(dados.precoOriginal - dados.precoAtual).toFixed(2).replace('.', ',')}
+                    {t.product.save} € {(dados.precoOriginal - dados.precoAtual).toFixed(2).replace('.', ',')}
                   </p>
                 </div>
 
                 <p className="flex items-center justify-center gap-2 rounded-xl bg-[#028794]/10 py-3 font-semibold text-base text-[#7de8ff] lg:justify-start">
                   <HiOutlineCreditCard className="text-xl" />
-                  12x R$ 151,42
+                  12x € 151,42
                 </p>
 
                 <div className="grid gap-3 rounded-2xl border border-[#028794]/10 bg-white/5 p-4 sm:grid-cols-3">
@@ -516,3 +516,4 @@ export default function Vitalvoice() {
     </section>
   )
 }
+

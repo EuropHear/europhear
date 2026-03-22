@@ -46,7 +46,7 @@ export default function SoftVoice() {
     parcelas: 12,
     avaliacoes: 15,
     nota: 4.4,
-    link: 'https://wa.me/5532999069763?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20especialista%20da%20Europhear'
+    link: 'https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0'
   }
 
   const [imagemSelecionada, setImagemSelecionada] = useState<string>(softVoiceGallery[0].src)
@@ -108,7 +108,7 @@ export default function SoftVoice() {
   ]
 
   const whatsappLink =
-    'https://wa.me/5532999069763?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20especialista%20da%20Europhear'
+    'https://tawk.to/chat/69bf5403977ac51c36884631/1jk9m0bi0'
 
   return (
     <section className="pt-20 md:pt-24 min-h-screen hero-bg grid-bg font-[Inter] text-white">
@@ -150,17 +150,17 @@ export default function SoftVoice() {
 
                 <div className="space-y-1 text-center lg:text-left">
                   <p className="line-through text-xs sm:text-sm text-slate-400">
-                    R$ {dados.precoOriginal.toFixed(2).replace('.', ',')}
+                    € {dados.precoOriginal.toFixed(2).replace('.', ',')}
                   </p>
                   <p className="text-slate-900 text-3xl sm:text-4xl font-bold">
-                    R$ {dados.precoAtual.toFixed(2).replace('.', ',')}
+                    € {dados.precoAtual.toFixed(2).replace('.', ',')}
                   </p>
-                  <p className="text-sm text-[#008b91] font-semibold">{t.product.save} R$ {economia}</p>
+                  <p className="text-sm text-[#008b91] font-semibold">{t.product.save} € {economia}</p>
                 </div>
 
                 <p className="flex items-center justify-center gap-2 rounded-xl bg-[#e6f6f8] py-3 font-semibold text-base text-[#006d7e] lg:justify-start border border-[#c3e7eb]">
                   <HiOutlineCreditCard className="text-xl" />
-                  12x R$ {(dados.precoAtual / dados.parcelas).toFixed(2).replace('.', ',')}
+                  12x € {(dados.precoAtual / dados.parcelas).toFixed(2).replace('.', ',')}
                 </p>
 
                 <div className="grid gap-3 rounded-2xl border border-[#dbe5ec] bg-[#f8fbfd] p-4 sm:grid-cols-3">
@@ -392,3 +392,4 @@ export default function SoftVoice() {
     </section>
   )
 }
+
