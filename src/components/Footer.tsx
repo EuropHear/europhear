@@ -96,6 +96,15 @@ export default function Footer() {
         {/* Column 3 */}
         <div>
           <h3 className="text-xl font-bold text-slate-900 mb-2">{f.col3Title}</h3>
+          <a
+            href="https://wa.me/351912588990"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 mb-3 rounded-lg bg-[#25D366] text-white font-semibold shadow hover:shadow-md transition"
+          >
+            <Phone size={16} />
+            <span>WhatsApp: +351 912 588 990</span>
+          </a>
           <ul className="text-sm space-y-2">
             <li className="flex items-center space-x-2">
               <Phone size={16} className="text-teal-600" />

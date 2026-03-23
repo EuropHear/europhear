@@ -6,10 +6,10 @@ import { useLanguage } from '../i18n/LanguageContext'
 import type { Lang } from '../i18n/translations'
 
 const LANGS: { code: Lang; flag: string; label: string }[] = [
-  { code: 'en',    flag: 'ðŸ‡¬ðŸ‡§', label: 'EN' },
-  { code: 'de',    flag: 'ðŸ‡©ðŸ‡ª', label: 'DE' },
-  { code: 'fr',    flag: 'ðŸ‡«ðŸ‡·', label: 'FR' },
-  { code: 'pt-PT', flag: 'ðŸ‡µðŸ‡¹', label: 'PT' },
+  { code: 'pt-PT', flag: '\u{1F1F5}\u{1F1F9}', label: 'PT' },
+  { code: 'en',    flag: '\u{1F1FA}\u{1F1F8}', label: 'EN' },
+  { code: 'de',    flag: '\u{1F1E9}\u{1F1EA}', label: 'DE' },
+  { code: 'fr',    flag: '\u{1F1EB}\u{1F1F7}', label: 'FR' },
 ]
 
 export default function Navbar() {
@@ -22,7 +22,7 @@ export default function Navbar() {
     setMenuOpen(false)
   }
 
-  const currentLang = LANGS.find(l => l.code === lang) ?? LANGS[0]
+  const currentLang = LANGS.find(l => l.code === lang) ?? LANGS.find(l => l.code === 'pt-PT') ?? LANGS[0]
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[#008B91] shadow-md">
@@ -151,3 +151,4 @@ export default function Navbar() {
     </header>
   )
 }
+

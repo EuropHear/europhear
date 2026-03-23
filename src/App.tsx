@@ -90,7 +90,7 @@ const aparelhosBase = [
   {
     sigla: 'VoicePro',
     nome: 'VoicePro Profissional Digital',
-    precoOriginal: 2099.0,
+    precoOriginal: 700.0,
     precoAtual: 199.0,
     avaliacoes: 47,
     imagem: voiceProHeroImage,
@@ -215,10 +215,9 @@ export default function App() {
   const p = t.products;
   const w = t.why;
   const test = t.testimonials;
-  const loc = t.location;
 
-  const descs = productDescs[lang] ?? productDescs['en'];
-  const installs = installmentsByLang[lang] ?? installmentsByLang['en'];
+  const descs = productDescs[lang] ?? productDescs['pt-PT'];
+  const installs = installmentsByLang[lang] ?? installmentsByLang['pt-PT'];
 
   const aparelhos = aparelhosBase.map(a => ({
     ...a,
@@ -561,37 +560,6 @@ export default function App() {
             <p className="text-gray-400">{test.subtitle}</p>
           </div>
           <Comments />
-        </div>
-      </section>
-
-      {/* ===== LOCATION ===== */}
-      <section className="py-20 px-4 lg:px-8 section-dark">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-2">
-              {loc.title1} <span className="text-gradient">{loc.title2}</span>
-            </h2>
-            <p className="text-gray-400">{loc.subtitle}</p>
-          </div>
-
-          <div className="card-3d overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.122083025319!2d-44.2522057!3d-21.1475393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa1c963c59a1c0f%3A0x53f730cb26c74473!2sFonovital%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1759945084576!5m2!1spt-BR!2sbr"
-              width="100%"
-              height="360"
-              style={{ border: 0 }}
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-              title={loc.mapTitle}
-            />
-          </div>
-
-          <div className="text-center mt-6 text-sm text-gray-400">
-            <p className="font-semibold text-[#008B91]">{loc.company}</p>
-            <p>{loc.cnpj}</p>
-            <p>{loc.address}</p>
-          </div>
         </div>
       </section>
 

@@ -55,7 +55,7 @@ export default function VoicePro() {
     nome: 'VoicePro Profissional Digital | Europhear',
     descricao:
       'Aparelho auditivo recarregável com design CIC (Completely-in-Canal), que combina tecnologia inteligente, conforto auditivo e esterilização UV integrada. Desenvolvido para oferecer clareza sonora natural e segura em diversos ambientes, com recarga magnética e display digital LED de alta definição.',
-    precoOriginal: 700,
+    precoOriginal: 2099,
     precoAtual: 199.0,
     parcelas: 12,
     avaliacoes: 47,

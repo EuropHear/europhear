@@ -12,17 +12,15 @@ type StringLeaves<T> = T extends readonly (infer U)[]
 
 export type TranslationType = StringLeaves<typeof translations['en']>;
 
+const PRIMARY_LANG: Lang = 'pt-PT';
+
 const defaultLang: Lang = (() => {
   try {
     const stored = localStorage.getItem(STORAGE_KEY) as Lang | null;
     if (stored && stored in translations) return stored;
-    const browser = navigator.language.toLowerCase();
-    if (browser.startsWith('de')) return 'de';
-    if (browser.startsWith('fr')) return 'fr';
-    if (browser.startsWith('pt-pt') || browser === 'pt') return 'pt-PT';
-    return 'en';
+    return PRIMARY_LANG;
   } catch {
-    return 'en';
+    return PRIMARY_LANG;
   }
 })();
 

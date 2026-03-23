@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Quote, Star } from 'lucide-react';
+import { Quote } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import { useLanguage } from '../i18n/LanguageContext';
@@ -29,47 +28,19 @@ interface Comment {
 }
 
 const initialComments: Comment[] = [
-  { id: 1, nome: 'Claudia Zeferino', idade: 68, produto: 'Voxcharge', local: 'São João del-Rei, MG', texto: 'Gostei bastante, me impressionei.', imagem: img1, estrelas: 4 },
-  { id: 2, nome: 'Gabriel Nenshin', idade: 72, produto: 'BTE Premium', local: 'Juiz de Fora, MG', texto: 'Funciona bem, achei que demoraria mas foi super rápido.', imagem: img4, estrelas: 4 },
+  { id: 1, nome: 'Cláudia Zeferino', idade: 68, produto: 'Voxcharge', local: 'Lisboa, PT', texto: 'Funciona bem e a entrega foi super rápida.', imagem: img1, estrelas: 4 },
+  { id: 2, nome: 'Gabriel Nenshin', idade: 72, produto: 'BTE Premium', local: 'Madrid, ES', texto: 'Works great, shipping was faster than expected.', imagem: img4, estrelas: 4 },
   { id: 3, nome: 'Ana Silva', idade: 65, produto: 'Voxton', local: 'Campinas, SP', texto: 'Produto excelente, som limpo e confortável. Recomendo!', imagem: img2, estrelas: 5 },
-  { id: 4, nome: 'Carlos Henrique', idade: 59, produto: 'Voxcharge', local: 'Caxias do Sul, RS', texto: 'Bom custo-benefício, me atendeu bem.', imagem: img5, estrelas: 4 },
-  { id: 5, nome: 'Marina Silva', idade: 70, produto: 'Vitalvoice', local: 'Barbacena, MG', texto: 'Gostei da qualidade, leve e eficiente.', imagem: img3, estrelas: 4 },
-  { id: 6, nome: 'Ligia Ramos', idade: 42, produto: 'Voxton', local: 'Itabira, MG', texto: 'Som muito bom, manual super intuitivo.', imagem: img6, estrelas: 4 },
-  { id: 7, nome: 'Fernanda Souza', idade: 67, produto: 'Voxcharge', local: 'São José dos Campos, SP', texto: 'Chegou rápido, atendimento ótimo. Voltaria a comprar!', imagem: img7, estrelas: 5 }
+  { id: 4, nome: 'Carlos Henrique', idade: 59, produto: 'Voxcharge', local: 'Caxias do Sul, RS', texto: 'Bom custo-benefício, atendeu-me bem.', imagem: img5, estrelas: 4 },
+  { id: 5, nome: 'Sofia Martins', idade: 62, produto: 'Vitalvoice', local: 'Porto, PT', texto: 'Muito discreto e fácil de usar no dia a dia.', imagem: img3, estrelas: 5 },
+  { id: 6, nome: 'Michael Turner', idade: 70, produto: 'VoicePro', local: 'London, UK', texto: 'Clear sound and comfortable fit for long days.', imagem: img6, estrelas: 4 },
+  { id: 7, nome: 'Maria Oliveira', idade: 58, produto: 'IAvoice', local: 'Faro, PT', texto: 'Chegou rápido e o apoio ao cliente foi impecável.', imagem: img7, estrelas: 5 }
 ];
 
 export default function Comments() {
   const { t } = useLanguage();
   const c = t.comments;
-
-  const [comments, setComments] = useState<Comment[]>(initialComments);
-  const [newComment, setNewComment] = useState<Omit<Comment, 'id'>>({
-    nome: '',
-    idade: 0,
-    produto: '',
-    local: '',
-    texto: '',
-    estrelas: 5,
-    imagem: ''
-  });
-
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setNewComment((prev) => ({ ...prev, imagem: reader.result as string }));
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!newComment.nome || !newComment.texto || !newComment.imagem) return;
-    setComments((prev) => [...prev, { id: prev.length + 1, ...newComment }]);
-    setNewComment({ nome: '', idade: 0, produto: '', local: '', texto: '', estrelas: 5, imagem: '' });
-  };
+  const comments = initialComments;
 
   return (
     <section className="w-full bg-[#F9FAFB] px-4 lg:px-8 py-12 mb-20">
@@ -77,7 +48,7 @@ export default function Comments() {
         <h2 className="text-3xl font-bold text-[#213547] mb-4 text-center">
           {c.title}
         </h2>
-        <p className="text-center text-yellow-500 font-semibold mb-10">★ 4.4/5.0</p>
+        <p className="text-center text-yellow-500 font-semibold mb-10">{'\u2605'} 4.4/5.0</p>
 
         <Swiper
           modules={[Navigation, Autoplay]}
@@ -111,7 +82,7 @@ export default function Comments() {
                 </div>
 
                 <div className="flex text-yellow-400 mb-2">
-                  {'★'.repeat(comment.estrelas).split('').map((star, i) => (
+                  {'\u2605'.repeat(comment.estrelas).split('').map((star, i) => (
                     <span key={i} className="text-lg">{star}</span>
                   ))}
                 </div>
@@ -124,54 +95,6 @@ export default function Comments() {
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* Review form */}
-        <form onSubmit={handleSubmit} className="mt-10 bg-white rounded-lg shadow-md p-6 space-y-4">
-          <h3 className="text-xl font-bold text-[#213547]">{c.leaveReview}</h3>
-
-          <input type="text" placeholder={c.namePlaceholder} value={newComment.nome}
-            onChange={(e) => setNewComment({ ...newComment, nome: e.target.value })}
-            className="w-full border p-2 rounded" required />
-
-          <input type="number" placeholder={c.agePlaceholder} value={newComment.idade}
-            onChange={(e) => setNewComment({ ...newComment, idade: Number(e.target.value) })}
-            className="w-full border p-2 rounded" required />
-
-          <input type="text" placeholder={c.productPlaceholder} value={newComment.produto}
-            onChange={(e) => setNewComment({ ...newComment, produto: e.target.value })}
-            className="w-full border p-2 rounded" required />
-
-          <input type="text" placeholder={c.cityPlaceholder} value={newComment.local}
-            onChange={(e) => setNewComment({ ...newComment, local: e.target.value })}
-            className="w-full border p-2 rounded" required />
-
-          <textarea placeholder={c.commentPlaceholder} value={newComment.texto}
-            onChange={(e) => setNewComment({ ...newComment, texto: e.target.value })}
-            className="w-full border p-2 rounded" required />
-
-          <div className="flex items-center gap-2">
-            <span className="text-[#213547] font-medium">{c.rating}</span>
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Star key={i} size={24}
-                className={`cursor-pointer transition ${newComment.estrelas > i ? 'text-yellow-400' : 'text-gray-300'}`}
-                onClick={() => setNewComment((prev) => ({ ...prev, estrelas: i + 1 }))} />
-            ))}
-          </div>
-
-          <div>
-            <label htmlFor="imagem"
-              className="cursor-pointer inline-block bg-[#007c91] text-white px-4 py-2 rounded hover:bg-[#006b7d] transition">
-              {c.uploadImage}
-            </label>
-            <input type="file" id="imagem" accept="image/*" onChange={handleImageUpload}
-              className="hidden" required />
-          </div>
-
-          <button type="submit"
-            className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition w-full">
-            {c.publish}
-          </button>
-        </form>
       </div>
     </section>
   );

@@ -328,3 +328,13 @@ body {
   animation: rotate-slow 20s linear infinite;
 }
 
+/* Stop animated backgrounds/particles */
+.hero-bg::before { animation: none; }
+.grid-bg { background-image: none; }
+.particle { display: none; animation: none; }
+.animate-float,
+.animate-float-slow,
+.animate-rotate-slow,
+.animate-gradient { animation: none !important; }
+.ring-decoration { animation: none; }
+
